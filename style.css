@@ -1,0 +1,27 @@
+
+
+.bgimg-1 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.bgimg-1 {
+	min-height: 100vh;
+	background-image: url("img/camino.jpg");
+}
+
+#contenido { margin-top: 100px;}
+
+
+
+@media screen and (min-width: 992px) {
+	#myNavbar{
+		display: block;
+		position: relative;
+	}
+	#contenido{
+		margin-top: 0px;
+	}
+}
