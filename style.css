@@ -1,16 +1,16 @@
 
 
-.bgimg-1 {
+.bgimg-1, .bgimg-2, .bgimg-3{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	min-height: 100vh;
 }
 
-.bgimg-1 {
-	min-height: 100vh;
-	background-image: url("img/camino.jpg");
-}
+.bgimg-1 {background-image: url("img/camino.jpg");}
+.bgimg-2 {background-image: url("img/hojas.jpg");}
+.bgimg-3 {background-image: url("img/parana.jpg");}
 
 #contenido { margin-top: 100px;}
 
