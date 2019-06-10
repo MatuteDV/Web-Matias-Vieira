@@ -2,18 +2,20 @@
 
 #social-nav i {padding-left: 16px;}
 
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	min-height: 50vh;
+	min-height: 70vh;
 }
 
-.bgimg-1 {background-image: url("img/camino.jpg"); min-height: 80vh;}
+.bgimg-1 {background-image: url("img/camino.jpg"); min-height: 100vh;}
 .bgimg-2 {background-image: url("img/hojas.jpg"); background-origin: border-box;}
 .bgimg-3 {background-image: url("img/sombrilla.jpg");}
-.bgimg-4 {background-image: url("img/parana.jpg");}
+.bgimg-4 {background-image: url("img/vision.jpg");}
+.bgimg-5 {background-image: url("img/carrera.jpg");}
+.bgimg-6 {background-image: url("img/parana.jpg");}
 
 #about-text { margin-top: 100px;}
 
