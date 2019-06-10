@@ -53,12 +53,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SOBRE MI</a> 
 		<a href="#skills" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HABILIDADES</a>
 		<a href="#idiomas" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plane fa-fw w3-margin-right"></i>IDIOMAS</a>
+		<a href="#visionymision" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wpexplorer fa-fw w3-margin-right"></i>VISION Y MISION</a>
+		<a href="#carrera" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-grav fa-fw w3-margin-right"></i>CARRERA</a>
 		<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
 	</div>
-	<h5 class="w3-text-grey" style="padding-left: 15%;">Curriculum Vitae</h5>
-	<div class="w3-bar" style="width: 100%;">
-		<a href="cv.html" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card-o fa-fw w3-margin-right"></i>CV - Web</a>
-		<a href="cv.pdf" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card-o fa-fw w3-margin-right"></i>CV - PDF</a>
+	<div onclick="togglecv()" class="w3-bar w3-border-top w3-border-black w3-light-grey w3-hover-black" style="cursor: pointer;">
+		<h5 style="padding-left: 15%;">Curriculum Vitae</h5>
+		<div id="contentcv" class="w3-hide">
+			<a href="cv.html" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel">
+				<i class="fa fa-address-card-o fa-fw w3-margin-right"></i>CV - Web
+			</a>
+			<a href="cv.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-leftbar w3-border-black">
+				<i class="fa fa-file-pdf-o fa-fw w3-margin-right"></i>CV - PDF
+			</a>
+		</div>
 	</div>
   
   <div id="social-nav" class="w3-panel w3-xlarge">
@@ -83,7 +91,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
 
   <!-- Parallax 1 - Camino -->
-  <div id="about" class="bgimg-1 w3-display-container w3-opacity-min" id="parallax-1">
+  <div id="about" class="bgimg-1 w3-display-container w3-opacity-min">
 		<div class="w3-display-middle" style="white-space: nowrap;">
 			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Sobre mi</span>
 		</div>
@@ -106,14 +114,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		</div>
 		<hr>
 		<!-- Parallax 2 - Hojas - Conocimientos técnicos -->
-		<div class="bgimg-2 w3-display-container w3-opacity-min" id="parallax-2">
+		<div id="skills" class="bgimg-2 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
 				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Conocimientos técnicos</span>
 			</div>
 	  </div>
 
 		<!-- Habilidades - Skills -->    
-		<div id="skills" class="w3-container" style="padding:68px 16px">
+		<div class="w3-container" style="padding:68px 16px">
 			<!--<h3 class="w3-center">Conocimientos técnicos</h3>-->
 			<p class="w3-center w3-large">Tecnologías en las que me desenvuelvo</p>
 			<div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -166,7 +174,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		<hr>
 
 		<!-- Parallax 3 - Sombrilla - Idiomas -->
-		<div id="idiomas" class="bgimg-3 w3-display-container w3-opacity-min" id="parallax-3">
+		<div id="idiomas" class="bgimg-3 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
 				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Idiomas</span>
 			</div>
@@ -187,14 +195,55 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  </div>
 	  <hr>
 
-		<!-- Parallax 3 - Paraná -->
-		<div id="contact" class="bgimg-4 w3-display-container w3-opacity-min" id="parallax-4">
+	  <!-- Parallax 4 - Vision y Mision -->
+		<div id="visionymision" class="bgimg-4 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Vision y mision</span>
+			</div>
+	  </div>
+
+	  <!-- Vision y mision - Donde estoy, que veo, donde quiero ir y como -->
+	  <hr>
+	  <div class="w3-row w3-cell-row">
+	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-edit' style='font-size:148px;'></i></div>
+	  	<div class="w3-twothird">
+	  		<h3 class="w3-center">Valores</h3>
+	  		<h5><span class="w3-xlarge">Vision:</span> Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Mision: </span>Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  	</div>
+	  </div>
+	  <hr>
+
+	  	  <!-- Parallax 5 - Vision y Mision -->
+		<div id="carrera" class="bgimg-5 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Mi actual carrera</span>
+			</div>
+	  </div>
+
+	  <!-- Vision y mision - Donde estoy, que veo, donde quiero ir y como -->
+	  <hr>
+	  <div class="w3-row w3-cell-row">
+	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-map-marker' style='font-size:148px;'></i></div>
+	  	<div class="w3-twothird">
+	  		<h3 class="w3-center">Mi actual carrera - Web Developer</h3>
+	  		<h5><span class="w3-xlarge">Donde estoy:</span> Para hablar de donde estoy tengo que ver de donde vengo.... Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Tecnologías actuales: </span>Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Siguiente paso: </span>Como Siguiente paso quiero poder complementar el desarrollo como FrontEnd con paginas basicas y operando, ofrecer servicio a comercios para poder crecer en experiencia y sentir la necesidad de una nueva tecnología, que ya viene siendo necesario complentar con algun lenguage backend, basico (no sin antes profundizar con APIs, hacer uso de JSON, AJAX y XML). Para volver a avanzar con alguna nueva tecnología frontEnd, como puede ser framework buscado como Angular, escalable como VUEjs o React. Pero no sin quizas tambien acompañar aprendiendo Typescript. Para en adelante profundizar como BackEnd y en bases de datos. Pero de seguro poder hacer uso de lenguajes backend PHP básico, un nuevo Framework frontEnd y base de datos...Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  	</div>
+	  </div>
+	  <hr>
+
+		<!-- Parallax 6 - Paraná -->
+		<div id="contact" class="bgimg-6 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
 				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Donde encontrarme?</span>
 			</div>
 	  </div>
 
-	  <div class="w3-container w3-padding-large" style="margin-bottom:32px;">
 		<hr>
 		<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. (agregar mas info de Paraná)
 		Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
@@ -202,6 +251,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 	  <!-- Donde encontrarme? - Redes Sociales -->
 	  <div id="social" class="w3-row w3-dark-grey">
+	  	<p class="w3-center w3-large w3-black"><span class="w3-hide-small">Podrás encontrarme</span>... en las siguientes redes.</p>
 	  	<a href="https://github.com/MatuteDV" target="_blank">
 		  	<div class="w3-quarter w3-button w3-hover-black">
 		  		<i class="fa fa-github"></i>
@@ -226,144 +276,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		  		<p>(0343) 154-465 390</p>
 		  	</div></a>
 	  </div>
-		
-		<h4>How much I charge</h4>
-		<!-- Pricing Tables -->
-		<div class="w3-row-padding" style="margin:0 -16px">
-		  <div class="w3-third w3-margin-bottom">
-			<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-			  <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-			  <li class="w3-padding-16">Web Design</li>
-			  <li class="w3-padding-16">Photography</li>
-			  <li class="w3-padding-16">1GB Storage</li>
-			  <li class="w3-padding-16">Mail Support</li>
-			  <li class="w3-padding-16">
-				<h2>$ 10</h2>
-				<span class="w3-opacity">per month</span>
-			  </li>
-			  <li class="w3-light-grey w3-padding-24">
-				<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-			  </li>
-			</ul>
-		  </div>
-		  
-		  <div class="w3-third w3-margin-bottom">
-			<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-			  <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
-			  <li class="w3-padding-16">Web Design</li>
-			  <li class="w3-padding-16">Photography</li>
-			  <li class="w3-padding-16">50GB Storage</li>
-			  <li class="w3-padding-16">Endless Support</li>
-			  <li class="w3-padding-16">
-				<h2>$ 25</h2>
-				<span class="w3-opacity">per month</span>
-			  </li>
-			  <li class="w3-light-grey w3-padding-24">
-				<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-			  </li>
-			</ul>
-		  </div>
-		  
-		  <div class="w3-third">
-			<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-			  <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-			  <li class="w3-padding-16">Web Design</li>
-			  <li class="w3-padding-16">Photography</li>
-			  <li class="w3-padding-16">Unlimited Storage</li>
-			  <li class="w3-padding-16">Endless Support</li>
-			  <li class="w3-padding-16">
-				<h2>$ 25</h2>
-				<span class="w3-opacity">per month</span>
-			  </li>
-			  <li class="w3-light-grey w3-padding-24">
-				<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </div>
-	  
-	  <!-- Contact Section -->
-	  <div class="w3-container w3-padding-large w3-grey">
-		<h4 id="contact"><b>Contact Me</b></h4>
-		<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-		  <div class="w3-third w3-dark-grey">
-			<p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-			<p>email@email.com</p>
-		  </div>
-		  <div class="w3-third w3-teal">
-			<p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-			<p>Chicago, US</p>
-		  </div>
-		  <div class="w3-third w3-dark-grey">
-			<p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-			<p>512312311</p>
-		  </div>
-		</div>
-		<hr class="w3-opacity">
-		<form action="/action_page.php" target="_blank">
-		  <div class="w3-section">
-			<label>Name</label>
-			<input class="w3-input w3-border" type="text" name="Name" required>
-		  </div>
-		  <div class="w3-section">
-			<label>Email</label>
-			<input class="w3-input w3-border" type="text" name="Email" required>
-		  </div>
-		  <div class="w3-section">
-			<label>Message</label>
-			<input class="w3-input w3-border" type="text" name="Message" required>
-		  </div>
-		  <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-		</form>
-	  </div>
-
+			  
 	  <!-- Footer -->
-	  <footer class="w3-container w3-padding-32 w3-dark-grey">
-	  <div class="w3-row-padding">
-		<div class="w3-third">
-		  <h3>FOOTER</h3>
-		  <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-		  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-		</div>
-	  
-		<div class="w3-third">
-		  <h3>BLOG POSTS</h3>
-		  <ul class="w3-ul w3-hoverable">
-			<li class="w3-padding-16">
-			  <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-			  <span class="w3-large">Lorem</span><br>
-			  <span>Sed mattis nunc</span>
-			</li>
-			<li class="w3-padding-16">
-			  <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-			  <span class="w3-large">Ipsum</span><br>
-			  <span>Praes tinci sed</span>
-			</li> 
-		  </ul>
-		</div>
-
-		<div class="w3-third">
-		  <h3>POPULAR TAGS</h3>
-		  <p>
-			<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-			<span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-			<span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-			<span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-			<span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-		  </p>
-		</div>
-
-	  </div>
+	  <footer class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.matiasvieiraweb.com.ar" title="Matias Vieira Front End Developer" target="_blank" class="w3-hover-opacity">Matias Vieira - Front End Developer</a></div>
 	  </footer>
-	  
-	  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
 	<!-- End page content -->
 </div>
 
 <script>
-	// Script para abrir o cerrar sidebar
+
+	// Script para abrir / cerrar sidebar
 	function w3_open() {
 		document.getElementById("mySidebar").style.display = "block";
 		document.getElementById("myOverlay").style.display = "block";
@@ -373,12 +295,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		document.getElementById("mySidebar").style.display = "none";
 		document.getElementById("myOverlay").style.display = "none";
 	}
-	// Script para cerrar overlay de bienvenida
+	// Script para cerrar por overlay de bienvenida
 	function cerrar_principal() {
 		document.getElementById("first-page").style.display = "none";
 		document.getElementById("overlay_bienvenida").className = "";
 	}
-	// cambia style de navbar on scroll
+	// Script cambia style de navbar on scroll
 	window.onscroll = function() {myFunction()};
 	function myFunction() {
 		var navbar = document.getElementById("myNavbar");
@@ -389,8 +311,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			navbar.className = " w3-top";
 		}
 	}
+
+	  //Script Toggle sección CV en Sidebar.
+  function togglecv() {
+  	var cvs = document.getElementById("contentcv");
+  	if (cvs.className == "w3-hide") {
+  		cvs.className = "w3-show";
+  	} else {cvs.className = "w3-hide";}
+  };
 $(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
+  // Add smooth scrolling a todos los links navbar + footer link (por implementar)
   $(".secciones-bar a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
@@ -413,7 +343,9 @@ $(document).ready(function(){
       });
     } // End if
   });
-})
+
+
+});
 </script>
 
 </body>
