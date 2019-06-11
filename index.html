@@ -40,7 +40,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav id="mySidebar" class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
   <div class="w3-container">
 		<a href="#" onclick="w3_close()" class="w3-hide-large w3-display-topright w3-large w3-padding w3-hover-text-green" title="close menu">
 		  <i class="fa fa-remove"></i>
@@ -55,15 +55,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		<a href="#idiomas" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plane fa-fw w3-margin-right"></i>IDIOMAS</a>
 		<a href="#visionymision" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wpexplorer fa-fw w3-margin-right"></i>VISION Y MISION</a>
 		<a href="#carrera" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-grav fa-fw w3-margin-right"></i>CARRERA</a>
+		<a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-code-o fa-fw w3-margin-right"></i>PORTFOLIO</a>
 		<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
 	</div>
 	<div onclick="togglecv()" class="w3-bar w3-border-top w3-border-black w3-light-grey w3-hover-black" style="cursor: pointer;">
 		<h5 style="padding-left: 15%;">Curriculum Vitae</h5>
 		<div id="contentcv" class="w3-hide">
-			<a href="cv.html" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel">
+			<a href="cv.html" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-hover-teal">
 				<i class="fa fa-address-card-o fa-fw w3-margin-right"></i>CV - Web
 			</a>
-			<a href="cv.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-leftbar w3-border-black">
+			<a href="cv.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-leftbar w3-border-black w3-hover-teal">
 				<i class="fa fa-file-pdf-o fa-fw w3-margin-right"></i>CV - PDF
 			</a>
 		</div>
@@ -148,9 +149,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 			</div>
 			<div class="w3-row-padding w3-center" style="margin-top:64px">
 				<div class="w3-quarter">
-					<i class="fa fa-mobile w3-margin-bottom w3-jumbo w3-center"></i>
-					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-					<i class="fa fa-tablet w3-margin-bottom w3-jumbo w3-center"></i>
+					<i class="fa fa-mobile w3-margin-bottom w3-xxlarge w3-center"></i>
+					<i class="fa fa-desktop w3-margin-bottom w3-xxlarge w3-center"></i>
+					<i class="fa fa-tablet w3-margin-bottom w3-xxlarge w3-center"></i>
 					<p class="w3-large">Responsive Design / Mobile First</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 				</div>
@@ -227,7 +228,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  <div class="w3-row w3-cell-row">
 	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-map-marker' style='font-size:148px;'></i></div>
 	  	<div class="w3-twothird">
-	  		<h3 class="w3-center">Mi actual carrera - Web Developer</h3>
+	  		<h3 class="w3-center">Mi actual carrera - Developer Web</h3>
 	  		<h5><span class="w3-xlarge">Donde estoy:</span> Para hablar de donde estoy tengo que ver de donde vengo.... Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
 	  		<hr>
 	  		<p><span class="w3-xlarge"> Tecnologías actuales: </span>Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
@@ -237,16 +238,50 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  </div>
 	  <hr>
 
-		<!-- Parallax 6 - Paraná -->
-		<div id="contact" class="bgimg-6 w3-display-container w3-opacity-min">
+	  <!-- Parallax 6 - Paraná -->
+		<div id="portfolio" class="bgimg-6 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Portfolio</span>
+			</div>
+	  </div>
+	  <hr>
+	  <div class="w3-row w3-center">
+	  	<h3>Mis creaciones</h3>
+	  	<h5>De momento se muestran las primeras creaciones propias, estaré actualizando la sección a medida se creen nuevos desarrollos que considere poder compartir y se comparte <a href="#">mi otra web</a> para venta de desarrollos web ofrecidos para comercios. </h5>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  </div>
+
+		<hr>
+
+		<!-- Parallax 7 - Paraná -->
+		<div id="contact" class="bgimg-7 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
 				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Donde encontrarme?</span>
 			</div>
 	  </div>
 
 		<hr>
-		<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. (agregar mas info de Paraná)
-		Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<!--<div id="googlemap" style="width: 100%;height: 60vh;"></div>-->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54285.631851838494!2d-60.54998246895893!3d-31.747240722015007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44df2b9835231%3A0x554ebde0aa5cfa9a!2zUGFyYW7DoSwgRW50cmUgUsOtb3M!5e0!3m2!1ses!2sar!4v1560257093161!5m2!1ses!2sar" width="100%" frameborder="0" style="border:0; min-height: 300px;"></iframe>
+			</div>
+			<div class="w3-twothird">
+				<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná, Entre Rios, Argentina (CP: 3100). (agregar mas info de Paraná)
+				Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
+			</div>
+		</div>
 		<hr>
 
 	  <!-- Donde encontrarme? - Redes Sociales -->
@@ -259,19 +294,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		  	</div>
 		  </a>
 		  <a href="https://www.linkedin.com/in/matias-vieira-44ab127b/" target="_blank">
-		  	<div class="w3-quarter w3-button w3-hover-black">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
 	  			<i class="fa fa-linkedin"></i>
 	  			<p>Linked In</p>
 		  	</div>
 		  </a>
 	  	<a href="mailto:vieiramatias@hotmail.com?Subject=Contacto" target="_blank">
-		  	<div class="w3-quarter w3-button w3-hover-black">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
 		  		<i class="fa fa-envelope"></i>
 		  		<p>CONTACTO</p>
 		  	</div>
 		  </a>
 	  	<a href="tel:0343154465390">
-		  	<div class="w3-quarter w3-button w3-hover-black">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
 		  		<i class="fa fa-phone-square"></i>
 		  		<p>(0343) 154-465 390</p>
 		  	</div></a>
@@ -344,9 +379,22 @@ $(document).ready(function(){
     } // End if
   });
 
-
+  //Script carga mapa google - posicion Paraná
+  /*
+  function mimapa() {
+  	var prop = {
+  		center:new google.maps.LatLng(51.508742,-0.120850),
+  		zoom:5,
+  	};
+  	var map = new google.maps.Map(document.getElementById("googlemap"),prop);
+  } */// fin map
+  
 });
+
+
 </script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6w1hY1PyB8MDnlG580s41EZ-4GDdfu9c&callback=mimapa"></script>-->
+
 
 </body>
 </html>
