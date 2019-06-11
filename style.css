@@ -1,8 +1,8 @@
-
+.secciones-bar i, #contentcv i {font-size: 20px;}
 
 #social-nav i {padding-left: 16px;}
 
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6{
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -15,7 +15,8 @@
 .bgimg-3 {background-image: url("img/sombrilla.jpg");}
 .bgimg-4 {background-image: url("img/vision.jpg");}
 .bgimg-5 {background-image: url("img/carrera.jpg");}
-.bgimg-6 {background-image: url("img/parana.jpg");}
+.bgimg-6 {background-image: url("img/porfolio.jpg");}
+.bgimg-7 {background-image: url("img/parana.jpg");}
 
 #about-text { margin-top: 100px;}
 
