@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Mi estilo -->
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- JQuery desde google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
@@ -19,17 +21,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <body class="w3-light-grey w3-content" style="max-width:1920px">
 
+<!-- Overlay bienvenida -->
 <div id="overlay_bienvenida" class="w3-overlay w3-animate-opacity w3-show" style="cursor: pointer; z-index: 990;" onclick="cerrar_principal()"></div>
-<!-- posible degrade: background-image: linear-gradient(to right,rgba(252,252,252,0.6),orange,orange, orange, rgba(252,252,252,0.6))" -->
-<div id="first-page" class=" w3-orange w3-animate-opacity w3-card w3-display-middle w3-margin-top" style="width: 80%; height: 800px; display: block; z-index: 999;">
+<!-- card bienvenida -->
+<div id="first-page" class=" w3-orange w3-animate-opacity w3-card w3-display-middle w3-margin-top" style="width: 80%; height: 90%; display: block; z-index: 999;">
 	<a href="#" onclick="cerrar_principal()" class="w3-display-topright w3-large w3-padding w3-hover-text-white" title="Ingresar">
-	  <i class="fa fa-remove"></i>
-	</a>
-	<div class="w3-row-padding w3-center w3-padding-32" style="height: 100vh;">
-		<h2 class="w3-center w3-text-white w3-orange">¿Quien soy?</h2><br>
-		<img src="img/ingreso.jpg" onclick="cerrar_principal()" class="w3-circle" style="width: 37%; cursor: pointer;">   
-		<h3>Mi nombre es Matias Damian Vieira<br>Soy FrontEnd Developer</h3>
-		<h5 style="margin: 35px 10%">Para conocer mas sobre mí, mi experiencia, aspiraciones, metas, gustos y habilidades te invito a que ingreses a mi sitio personal.</h5>
+	  <i class="fa fa-remove"></i> <!-- remove - cerrar -->
+	</a> 
+	<div class="w3-row-padding w3-center w3-padding-32" style="height: 90vh;">
+		<h2 class="w3-center w3-black w3-text-white">BIENVENIDO</h2><br>
+		<img src="img/ingreso.jpg" onclick="cerrar_principal()" class="w3-circle" style="width: 27%; cursor: pointer;">   
+		<h4>Mi nombre es Matias Damian Vieira<br>Soy FrontEnd Developer</h4>
+		<h6 style="margin: 35px 10%">Para conocer mas sobre mí, mi experiencia, aspiraciones, metas, gustos y habilidades te invito a que ingreses a mi sitio personal.</h6>
 		<button onclick="cerrar_principal()" class="w3-button w3-orange w3-border w3-border-black w3-hover-black w3-round w3-padding" >Ingresar</button>
 	</div>
 
@@ -37,27 +40,42 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav id="mySidebar" class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
   <div class="w3-container">
-	<a href="#" onclick="w3_close()" class="w3-hide-large w3-display-topright w3-large w3-padding w3-hover-text-green" title="close menu">
-	  <i class="fa fa-remove"></i>
-	</a>
-	<img src="img/tunel.jpg" style="width:45%;" class="w3-round"><br><br>
-	<h4><b>Matias Damian Vieira</b></h4>
-	<p class="w3-text-grey">FrontEnd Developer</p>
+		<a href="#" onclick="w3_close()" class="w3-hide-large w3-display-topright w3-large w3-padding w3-hover-text-green" title="close menu">
+		  <i class="fa fa-remove"></i>
+		</a>
+		<img src="img/tunel.jpg" style="width:45%;" class="w3-round"><br><br>
+		<h4><b>Matias Damian Vieira</b></h4>
+		<p class="w3-text-grey">FrontEnd Developer</p>
   </div>
-  <div class="w3-bar-block">
-	<a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-	<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SOBRE MI</a> 
-	<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
-  </div>
-  <div class="w3-panel w3-large">
-	<i class="fa fa-facebook-official w3-hover-opacity"></i>
-	<i class="fa fa-instagram w3-hover-opacity"></i>
-	<i class="fa fa-snapchat w3-hover-opacity"></i>
-	<i class="fa fa-pinterest-p w3-hover-opacity"></i>
-	<i class="fa fa-twitter w3-hover-opacity"></i>
-	<a href="#"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <div class="w3-bar-block secciones-bar">
+		<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SOBRE MI</a> 
+		<a href="#skills" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>HABILIDADES</a>
+		<a href="#idiomas" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plane fa-fw w3-margin-right"></i>IDIOMAS</a>
+		<a href="#visionymision" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-wpexplorer fa-fw w3-margin-right"></i>VISION Y MISION</a>
+		<a href="#carrera" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-grav fa-fw w3-margin-right"></i>CARRERA</a>
+		<a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-code-o fa-fw w3-margin-right"></i>PORTFOLIO</a>
+		<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACTO</a>
+	</div>
+	<div onclick="togglecv()" class="w3-bar w3-border-top w3-border-black w3-light-grey w3-hover-black" style="cursor: pointer;">
+		<h5 style="padding-left: 15%;">Curriculum Vitae</h5>
+		<div id="contentcv" class="w3-hide">
+			<a href="cv.html" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-hover-teal">
+				<i class="fa fa-address-card-o fa-fw w3-margin-right"></i>CV - Web
+			</a>
+			<a href="cv.pdf" target="_blank" class="w3-bar-item w3-button w3-padding w3-panel w3-leftbar w3-border-black w3-hover-teal">
+				<i class="fa fa-file-pdf-o fa-fw w3-margin-right"></i>CV - PDF
+			</a>
+		</div>
+	</div>
+  
+  <div id="social-nav" class="w3-panel w3-xlarge">
+		<a href="https://www.linkedin.com/in/matias-vieira-44ab127b/" target="_blank"><i class="fa fa-linkedin w3-hover-text-blue"></i></a>
+		<a href="https://github.com/MatuteDV" target="_blank"><i class="fa fa-github w3-hover-text-red"></i></a>
+		<a href="https://api.whatsapp.com/send?phone=543434465390" target="_blank"><i class="fa fa-whatsapp w3-hover-text-green"></i></a>
+		<a href="tel:0343154465390"><i class="fa fa-phone-square w3-hover-text-orange"></i></a>
+		<a href="mailto:vieiramatias@hotmail.com?Subject=Contacto_Web" target="_blank"><i class="fa fa-envelope w3-hover-text-purple"></i></a>
   </div>
 </nav>
 
@@ -69,289 +87,314 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header id="myNavbar" class="w3-top" style="background-color: rgba(255,255,255,0.01);">
-	<a href="#" class="w3-display-topright"><img src="img/tunel.jpg" style="width:75px; margin-top: 8px; margin-right: 16px;" class="w3-circle w3-right w3-hide-large"></a>
-	<span class="w3-button w3-hide-large w3-xlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+		<a href="#" class="w3-display-topright"><img src="img/tunel.jpg" style="width:75px; margin-top: 8px; margin-right: 16px;" class="w3-circle w3-right w3-hide-large"></a>
+		<span class="w3-button w3-hide-large w3-xlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
   </header>
 
   <!-- Parallax 1 - Camino -->
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="parallax-1">
+  <div id="about" class="bgimg-1 w3-display-container w3-opacity-min">
 		<div class="w3-display-middle" style="white-space: nowrap;">
-			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Bienvenido</span>
+			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Sobre mi</span>
 		</div>
   </div>
   
-	<div id="contenido" class="w3-container w3-padding-large" style="margin-bottom:32px;">
-	<h4><b>Sobre mí</b></h4>
-	<p>Crecí con gusto por la tecnología, en especial por las computadoras y sobre todo desarmar, probar, romper y volver a hacerlo andar. Antes de terminar el secundario terminé curso de reparador de PC y sabía que estudiaría Analista en sistemas informaticos, donde descubrí mas sobre el mundo de poder probar, romper y volver a hacer andar y en este caso el software. Soy Analista en sistemas informaticos y desde hace un tiempo que me oriento en desarrollo web. Hasta el nacimiento de HTML5 no atrajo mi interes el desarrollo web, pero a día de hoy con el gran crecimiento de tecnologías que acompañan, tengo decidido dedicarme a conocer poco a poco como es ser FronEnd, BackEnd, nueva arquitectura de base de datos NO-SQL, APIs y los Frameworks, librerías de cada lado y todo lo increible que se volvió el desarrollo web. (reveer texto)</p>
-	<hr>
+  <!-- Sobre mi -->
+	<div id="about-text" class="w3-container w3-padding-large" style="margin-bottom:32px;">
+		<!--<h4 class="w3-center w3-xlarge w3-padding-32"><b>Sobre mí</b></h4>-->
+		<p class="w3-large" style="line-height: 32px"><span class="w3-xxlarge" style="padding-left: 24px;">C</span>recí con gusto por la tecnología, en especial por las computadoras y sobre todo desarmar, probar, romper y volver a hacerlo andar. Antes de terminar el secundario terminé curso de reparador de PC y sabía que estudiaría Analista en sistemas informaticos, donde descubrí mas sobre el mundo de poder probar, romper y volver a hacer andar y en este caso el software. Soy Analista en sistemas informaticos y desde hace un tiempo que me oriento en desarrollo web; pero no hasta el crecimiento de HTML5 que atrajo mi interes en el desarrollo web, a día de hoy con el gran crecimiento de tecnologías que acompañan, tengo decidido dedicarme a conocer poco a poco como es ser FronEnd, BackEnd, nueva arquitectura de base de datos NO-SQL, APIs, Frameworks y librerías de cada lado, y todo lo increible que se volvió el desarrollo web. (reveer texto)</p>
+		<hr>
 
-	<!-- Images of Me -->
-	<div class="w3-row-padding w3-padding-16" id="about">
-	  <div class="w3-col m6">
-		<img src="img/costa1.jpg" alt="Me" style="width:100%">
+		<!-- Images of Me -->
+		<div class="w3-row-padding">
+		  <div class="w3-col m6">
+			<img src="img/costa1.jpg" alt="Me" style="width:100%">
+		  </div>
+		  <div class="w3-col m6">
+			<img src="img/costa.jpg" alt="Me" style="width:100%">
+		  </div>
+		</div>
+		<hr>
+		<!-- Parallax 2 - Hojas - Conocimientos técnicos -->
+		<div id="skills" class="bgimg-2 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Conocimientos técnicos</span>
+			</div>
 	  </div>
-	  <div class="w3-col m6">
-		<img src="img/costa.jpg" alt="Me" style="width:100%">
+
+		<!-- Habilidades - Skills -->    
+		<div class="w3-container" style="padding:68px 16px">
+			<!--<h3 class="w3-center">Conocimientos técnicos</h3>-->
+			<p class="w3-center w3-large">Tecnologías en las que me desenvuelvo</p>
+			<div class="w3-row-padding w3-center" style="margin-top:64px">
+				<div class="w3-quarter">
+					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+					<p class="w3-large">HTML</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">CSS</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">JS</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">JQuery</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+			</div>
+			<div class="w3-row-padding w3-center" style="margin-top:64px">
+				<div class="w3-quarter">
+					<i class="fa fa-mobile w3-margin-bottom w3-xxlarge w3-center"></i>
+					<i class="fa fa-desktop w3-margin-bottom w3-xxlarge w3-center"></i>
+					<i class="fa fa-tablet w3-margin-bottom w3-xxlarge w3-center"></i>
+					<p class="w3-large">Responsive Design / Mobile First</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">Bootstrap / W3CSS</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-git-square w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">Git</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+				<div class="w3-quarter">
+					<i class="fa fa-object-group w3-margin-bottom w3-jumbo"></i>
+					<p class="w3-large">Ajax / JSON / XML</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<!-- Parallax 3 - Sombrilla - Idiomas -->
+		<div id="idiomas" class="bgimg-3 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Idiomas</span>
+			</div>
 	  </div>
-	</div>
-	<hr>
-	<!-- Parallax 2 - Hojas -->
-	<div class="bgimg-2 w3-display-container w3-opacity-min" id="parallax-2">
-		<div class="w3-display-middle" style="white-space: nowrap;">
-			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Conocimientos técnicos</span>
-		</div>
-  </div>
 
-	<!-- Habilidades - Skills -->    
-	<div class="w3-container" style="padding:68px 16px" id="about">
-		<!--<h3 class="w3-center">Conocimientos técnicos</h3>-->
-		<p class="w3-center w3-large">Tecnologías con las que me desenvuelvo</p>
-		<div class="w3-row-padding w3-center" style="margin-top:64px">
-			<div class="w3-quarter">
-				<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-				<p class="w3-large">HTML</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">CSS</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">JS</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">JQuery</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-		</div>
-		<div class="w3-row-padding w3-center" style="margin-top:64px">
-			<div class="w3-quarter">
-				<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-				<p class="w3-large">Responsive Design / Mobile First</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">Bootstrap / W3CSS</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">Git / GitHub</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-			<div class="w3-quarter">
-				<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-				<p class="w3-large">Ajax / JSON / XML</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-			</div>
-		</div>
-	</div>
-	<hr>
-
-	<!-- Parallax 3 - Paraná -->
-	<div class="bgimg-3 w3-display-container w3-opacity-min" id="parallax-3">
-		<div class="w3-display-middle" style="white-space: nowrap;">
-			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Donde encontrarme?</span>
-		</div>
-  </div>
-
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px;">
-	<hr>
-	<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. (agregar mas info de Paraná)
-	Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
-	<hr>
-
-  <!-- Donde encontrarme? - Redes Sociales -->
-  <div class="w3-row w3-dark-grey">
-  	<div class="w3-quarter w3-button">
-  		<i class="fa fa-github"></i>
-  		<p>Github</p>
-  	</div>
-  	<div class="w3-quarter w3-button">
-  		<a href="#"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  		<p>Linked In</p>
-  	</div>
-  	<a href="mailto:vieiramatias@hotmail.com?Subject=Contacto" target="_blank">
-	  	<div class="w3-quarter w3-button">
-	  		<i class="fa fa-envelope"></i>
-	  		<p>CONTACTO</p>
+	  <!-- container row - idiomas -->
+	  <div id="contenido-idiomas" class="w3-row w3-container w3-center w3-padding-32 w3-large">
+	  	<div class="w3-half">
+	  		<i class="fa fa-comment"></i>
+	  		<p><b>Español - Lengua nativa</b></p>
+	  		<p class="w3-padding-16">Poner algo acá sobre idioma español. </p>
 	  	</div>
-	  </a>
-  	<a href="tel:0343154465390">
-  	<div class="w3-quarter w3-button">
-  		<i class="fa fa-phone-square"></i>
-  		<p>(0343) 154-465 390</p>
-  	</div></a>
-  </div>
-	
-	<h4>How much I charge</h4>
-	<!-- Pricing Tables -->
-	<div class="w3-row-padding" style="margin:0 -16px">
-	  <div class="w3-third w3-margin-bottom">
-		<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-		  <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-		  <li class="w3-padding-16">Web Design</li>
-		  <li class="w3-padding-16">Photography</li>
-		  <li class="w3-padding-16">1GB Storage</li>
-		  <li class="w3-padding-16">Mail Support</li>
-		  <li class="w3-padding-16">
-			<h2>$ 10</h2>
-			<span class="w3-opacity">per month</span>
-		  </li>
-		  <li class="w3-light-grey w3-padding-24">
-			<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-		  </li>
-		</ul>
+	  	<div class="w3-half">
+	  		<i class="fa fa-comment-o"></i>
+	  		<p><b>Ingles - Intermedio</b></p>
+	  		<p class="w3-padding-16">Desde Junio de 2018 retomé estudios de Ingles, con clases personalizadas, para poder continuar aprendiendo y alcanzar poder conversar fluidamente con hablantes nativos de esta lengua. </p>
+	  	</div>
 	  </div>
-	  
-	  <div class="w3-third w3-margin-bottom">
-		<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-		  <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
-		  <li class="w3-padding-16">Web Design</li>
-		  <li class="w3-padding-16">Photography</li>
-		  <li class="w3-padding-16">50GB Storage</li>
-		  <li class="w3-padding-16">Endless Support</li>
-		  <li class="w3-padding-16">
-			<h2>$ 25</h2>
-			<span class="w3-opacity">per month</span>
-		  </li>
-		  <li class="w3-light-grey w3-padding-24">
-			<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-		  </li>
-		</ul>
-	  </div>
-	  
-	  <div class="w3-third">
-		<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-		  <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-		  <li class="w3-padding-16">Web Design</li>
-		  <li class="w3-padding-16">Photography</li>
-		  <li class="w3-padding-16">Unlimited Storage</li>
-		  <li class="w3-padding-16">Endless Support</li>
-		  <li class="w3-padding-16">
-			<h2>$ 25</h2>
-			<span class="w3-opacity">per month</span>
-		  </li>
-		  <li class="w3-light-grey w3-padding-24">
-			<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-		  </li>
-		</ul>
-	  </div>
-	</div>
-  </div>
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-	<h4 id="contact"><b>Contact Me</b></h4>
-	<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-	  <div class="w3-third w3-dark-grey">
-		<p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-		<p>email@email.com</p>
-	  </div>
-	  <div class="w3-third w3-teal">
-		<p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-		<p>Chicago, US</p>
-	  </div>
-	  <div class="w3-third w3-dark-grey">
-		<p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-		<p>512312311</p>
-	  </div>
-	</div>
-	<hr class="w3-opacity">
-	<form action="/action_page.php" target="_blank">
-	  <div class="w3-section">
-		<label>Name</label>
-		<input class="w3-input w3-border" type="text" name="Name" required>
-	  </div>
-	  <div class="w3-section">
-		<label>Email</label>
-		<input class="w3-input w3-border" type="text" name="Email" required>
-	  </div>
-	  <div class="w3-section">
-		<label>Message</label>
-		<input class="w3-input w3-border" type="text" name="Message" required>
-	  </div>
-	  <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-	</form>
-  </div>
+	  <hr>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-  <div class="w3-row-padding">
-	<div class="w3-third">
-	  <h3>FOOTER</h3>
-	  <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-	  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-	</div>
-  
-	<div class="w3-third">
-	  <h3>BLOG POSTS</h3>
-	  <ul class="w3-ul w3-hoverable">
-		<li class="w3-padding-16">
-		  <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-		  <span class="w3-large">Lorem</span><br>
-		  <span>Sed mattis nunc</span>
-		</li>
-		<li class="w3-padding-16">
-		  <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-		  <span class="w3-large">Ipsum</span><br>
-		  <span>Praes tinci sed</span>
-		</li> 
-	  </ul>
-	</div>
+	  <!-- Parallax 4 - Vision y Mision -->
+		<div id="visionymision" class="bgimg-4 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Vision y mision</span>
+			</div>
+	  </div>
 
-	<div class="w3-third">
-	  <h3>POPULAR TAGS</h3>
-	  <p>
-		<span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-		<span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-		<span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-		<span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-		<span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-	  </p>
-	</div>
+	  <!-- Vision y mision - Donde estoy, que veo, donde quiero ir y como -->
+	  <hr>
+	  <div class="w3-row w3-cell-row">
+	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-edit' style='font-size:148px;'></i></div>
+	  	<div class="w3-twothird">
+	  		<h3 class="w3-center">Valores</h3>
+	  		<h5><span class="w3-xlarge">Vision:</span> Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Mision: </span>Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  	</div>
+	  </div>
+	  <hr>
 
-  </div>
-  </footer>
-  
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+	  	  <!-- Parallax 5 - Vision y Mision -->
+		<div id="carrera" class="bgimg-5 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Mi actual carrera</span>
+			</div>
+	  </div>
 
-<!-- End page content -->
+	  <!-- Vision y mision - Donde estoy, que veo, donde quiero ir y como -->
+	  <hr>
+	  <div class="w3-row w3-cell-row">
+	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-map-marker' style='font-size:148px;'></i></div>
+	  	<div class="w3-twothird">
+	  		<h3 class="w3-center">Mi actual carrera - Developer Web</h3>
+	  		<h5><span class="w3-xlarge">Donde estoy:</span> Para hablar de donde estoy tengo que ver de donde vengo.... Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Tecnologías actuales: </span>Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  		<hr>
+	  		<p><span class="w3-xlarge"> Siguiente paso: </span>Como Siguiente paso quiero poder complementar el desarrollo como FrontEnd con paginas basicas y operando, ofrecer servicio a comercios para poder crecer en experiencia y sentir la necesidad de una nueva tecnología, que ya viene siendo necesario complentar con algun lenguage backend, basico (no sin antes profundizar con APIs, hacer uso de JSON, AJAX y XML). Para volver a avanzar con alguna nueva tecnología frontEnd, como puede ser framework buscado como Angular, escalable como VUEjs o React. Pero no sin quizas tambien acompañar aprendiendo Typescript. Para en adelante profundizar como BackEnd y en bases de datos. Pero de seguro poder hacer uso de lenguajes backend PHP básico, un nuevo Framework frontEnd y base de datos...Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+	  	</div>
+	  </div>
+	  <hr>
+
+	  <!-- Parallax 6 - Paraná -->
+		<div id="portfolio" class="bgimg-6 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Portfolio</span>
+			</div>
+	  </div>
+	  <hr>
+	  <div class="w3-row w3-center">
+	  	<h3>Mis creaciones</h3>
+	  	<h5>De momento se muestran las primeras creaciones propias, estaré actualizando la sección a medida se creen nuevos desarrollos que considere poder compartir y se comparte <a href="#">mi otra web</a> para venta de desarrollos web ofrecidos para comercios. </h5>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  	<div class="w3-quarter">
+	  		<div class="w3-card" style="height: 30vh;"></div>
+	  	</div>
+	  </div>
+
+		<hr>
+
+		<!-- Parallax 7 - Paraná -->
+		<div id="contact" class="bgimg-7 w3-display-container w3-opacity-min">
+			<div class="w3-display-middle" style="white-space: nowrap;">
+				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Donde encontrarme?</span>
+			</div>
+	  </div>
+
+		<hr>
+		<div class="w3-row-padding">
+			<div class="w3-third">
+				<!--<div id="googlemap" style="width: 100%;height: 60vh;"></div>-->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54285.631851838494!2d-60.54998246895893!3d-31.747240722015007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44df2b9835231%3A0x554ebde0aa5cfa9a!2zUGFyYW7DoSwgRW50cmUgUsOtb3M!5e0!3m2!1ses!2sar!4v1560257093161!5m2!1ses!2sar" width="100%" frameborder="0" style="border:0; min-height: 300px;"></iframe>
+			</div>
+			<div class="w3-twothird">
+				<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná, Entre Rios, Argentina (CP: 3100). (agregar mas info de Paraná)
+				Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
+			</div>
+		</div>
+		<hr>
+
+	  <!-- Donde encontrarme? - Redes Sociales -->
+	  <div id="social" class="w3-row w3-dark-grey">
+	  	<p class="w3-center w3-large w3-black"><span class="w3-hide-small">Podrás encontrarme</span>... en las siguientes redes.</p>
+	  	<a href="https://github.com/MatuteDV" target="_blank">
+		  	<div class="w3-quarter w3-button w3-hover-black">
+		  		<i class="fa fa-github"></i>
+		  		<p>Github</p>
+		  	</div>
+		  </a>
+		  <a href="https://www.linkedin.com/in/matias-vieira-44ab127b/" target="_blank">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
+	  			<i class="fa fa-linkedin"></i>
+	  			<p>Linked In</p>
+		  	</div>
+		  </a>
+	  	<a href="mailto:vieiramatias@hotmail.com?Subject=Contacto" target="_blank">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
+		  		<i class="fa fa-envelope"></i>
+		  		<p>CONTACTO</p>
+		  	</div>
+		  </a>
+	  	<a href="tel:0343154465390">
+		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
+		  		<i class="fa fa-phone-square"></i>
+		  		<p>(0343) 154-465 390</p>
+		  	</div></a>
+	  </div>
+			  
+	  <!-- Footer -->
+	  <footer class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.matiasvieiraweb.com.ar" title="Matias Vieira Front End Developer" target="_blank" class="w3-hover-opacity">Matias Vieira - Front End Developer</a></div>
+	  </footer>
+	<!-- End page content -->
 </div>
 
 <script>
-// Script para abrir o cerrar sidebar
-function w3_open() {
-	document.getElementById("mySidebar").style.display = "block";
-	document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-	document.getElementById("mySidebar").style.display = "none";
-	document.getElementById("myOverlay").style.display = "none";
-}
-// Script para cerrar overlay de bienvenida
-function cerrar_principal(x) {
-	document.getElementById("first-page").style.display = "none";
-	document.getElementById("overlay_bienvenida").className = "";
-}
-// cambia style de navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-	var navbar = document.getElementById("myNavbar");
-	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-		navbar.className = " w3-top" + " w3-card" + " w3-animate-opacity" + " w3-black";
-		navbar
-	} else {
-		navbar.className = " w3-top";
+
+	// Script para abrir / cerrar sidebar
+	function w3_open() {
+		document.getElementById("mySidebar").style.display = "block";
+		document.getElementById("myOverlay").style.display = "block";
 	}
-}
+	 
+	function w3_close() {
+		document.getElementById("mySidebar").style.display = "none";
+		document.getElementById("myOverlay").style.display = "none";
+	}
+	// Script para cerrar por overlay de bienvenida
+	function cerrar_principal() {
+		document.getElementById("first-page").style.display = "none";
+		document.getElementById("overlay_bienvenida").className = "";
+	}
+	// Script cambia style de navbar on scroll
+	window.onscroll = function() {myFunction()};
+	function myFunction() {
+		var navbar = document.getElementById("myNavbar");
+		if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+			navbar.className = " w3-top" + " w3-card" + " w3-animate-opacity" + " w3-black";
+			navbar
+		} else {
+			navbar.className = " w3-top";
+		}
+	}
+
+	  //Script Toggle sección CV en Sidebar.
+  function togglecv() {
+  	var cvs = document.getElementById("contentcv");
+  	if (cvs.className == "w3-hide") {
+  		cvs.className = "w3-show";
+  	} else {cvs.className = "w3-hide";}
+  };
+$(document).ready(function(){
+  // Add smooth scrolling a todos los links navbar + footer link (por implementar)
+  $(".secciones-bar a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  //Script carga mapa google - posicion Paraná
+  /*
+  function mimapa() {
+  	var prop = {
+  		center:new google.maps.LatLng(51.508742,-0.120850),
+  		zoom:5,
+  	};
+  	var map = new google.maps.Map(document.getElementById("googlemap"),prop);
+  } */// fin map
+  
+});
+
+
 </script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6w1hY1PyB8MDnlG580s41EZ-4GDdfu9c&callback=mimapa"></script>-->
+
 
 </body>
 </html>
