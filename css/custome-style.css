@@ -1,0 +1,289 @@
+html, body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+
+	h3, h4 {
+	    margin: 10px 0 30px 0;
+	    letter-spacing: 10px;      
+	    font-size: 1.75em;
+	    color: #111;
+	  }
+
+	.texto-superpuesto {
+		padding: 0.5em 1em;
+		background-color: yellow;
+	    position: absolute;
+	    top: 1em;
+	    left: -0.8em;
+	    width: 12em;
+	    font-size: 0.8em;
+	}
+
+	.fa-phone {font-size: 1.3em;}
+
+	.fa-whatsapp {font-size: 1.3em;}
+
+	.fa-envelope {font-size: 1.25em}
+
+	.fa-facebook-square {font-size: 1.25em;}
+
+	.fa-instagram {font-size: 1.25em;}
+
+	.container {padding: 80px 100px;}
+
+/* -----   NAVBAR -----*/
+	.navbar-brand:hover {
+		background: #666 !important;
+		color: white !important;
+	}
+
+	.navbar-text {
+		color: #666;
+		font-size: 0.9em; 
+		margin: 8px; 
+	}
+
+		.navbar-text i {
+			color: #666;
+		}
+			#a-telefono-navbar {
+				color: #666;
+				text-decoration: none;
+				padding: 17px 10px;
+			}
+				#a-telefono-navbar:hover i {color: white;}
+				#a-telefono-navbar:hover {
+					color: white;
+					background-color: #666;
+				}
+			#a-correo-navbar {
+				color: #666;
+				text-decoration: none;
+				padding: 17px 10px;
+			}
+				#a-correo-navbar i {
+					font-size: 1.3em;
+				}
+				#a-correo-navbar:hover {
+					color: white;
+					background: #666;
+				}
+				#a-correo-navbar:hover i{color: white;}
+
+			#a-facebook-navbar {
+				text-decoration: none;
+				font-size: 1.3em;
+				padding-left: 10px;
+			}
+				#a-facebook-navbar:hover i{color: #337ab7;}
+
+			#a-instagram-navbar {
+				text-decoration: none;
+				font-size: 1.3em;
+				padding-left: 10px;
+			}
+				#a-instagram-navbar:hover i{color: #CF4CA2;}
+
+			#a-whatsapp-navbar {
+				text-decoration: none;
+				font-size: 1.3em;
+				padding-left: 10px;
+			}
+				#a-whatsapp-navbar:hover i{color: #26D466;}
+
+	.navbar-right {margin-right: 0px;}
+
+/* ----- FIN NAVBAR ---- */
+
+	.jumbotron {
+	    background-color: white;
+	    color: #666;
+	    padding: 150px 25px;
+	    font-family: Montserrat, sans-serif;
+	  }
+
+	#presentacion {
+		background-image: url('../img/logo.svg');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: contain;
+		background-origin: content-box;
+		margin: 0 auto;
+		color: #666;
+		padding: 160px 25px;
+	}
+		#presentacion i, #presentacion a, #presentacion span, #presentacion p {
+			color: #666;
+		}
+
+		#presentacion p {
+			padding-top: 1.3em;
+		}
+
+		#a-whatsapp-presentacion:hover i {
+			color: #26D466;
+			text-shadow: 10 10 10 5px grey;
+		}
+
+		#a-facebook-presentacion:hover i {color: #337ab7;}
+		#a-instagram-presentacion:hover i {color: #CF4CA2;}
+
+	#sobre-mi {
+		background: #f8f8f8 !important;
+	  	text-align: center;
+	  	padding: 70px 25px;
+	}	
+		#sobre-mi .col-sm-4 {height: 100%;}
+		#sobre-mi h3 {font-size: 2.2em;}
+		#sobre-mi p {line-height: 42px;}
+		#sobre-mi span {padding-top: 25%; }
+		.logo-small {font-size: 185px;color: red;}
+		
+		#sobre-mi .row {padding: 50px 0;}
+
+	#servicios {
+	  	padding-bottom: 100px;
+	  	padding-left: 15px;
+	  	text-align: center;
+	}
+	  	#servicios h3 {margin: 100px 100px 150px 100px;}
+	  	#servicios i {font-size:148px;color:red;}
+	  	.text-center {margin: 20px 0;}
+
+	#portfolio {
+		padding-top: 50px;
+		padding-bottom: 0px; 
+	  	background: #f8f8f8;
+	}
+		#portfolio img {max-width: 100%; /*max-width: 586px;max-height: 342px;*/}
+		#portfolio h2 {font-size: 2.3em}
+		#portfolio h5 {font-size: 1.2em;}
+		#portfolio .thumbnail {border: none;box-shadow: 10 10 10 5px grey !important;}
+		.caja-thumbnail {text-shadow: 10 10 10 5px grey !important;}
+
+
+	#contact {
+	  	padding: 150px 0;
+	}
+
+		#contact span {font-size: 1.4em;}
+
+	footer {
+		margin: 0px !important;
+	    background-color: #2d2d30;
+	    color: #f5f5f5;
+	    padding: 32px;
+	}
+		footer a {
+	    color: #f5f5f5;
+		}
+		footer a:hover {
+	    color: red;
+	    text-decoration: none;
+		}  
+
+/* ----Animacion Slide en Scroll ----- */
+
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+/* ---- MEDIA Querys ----- */
+			/* ----- min 991px ----- */
+	@media screen and (min-width: 991px) {
+		#row-venta {height: 42vw;}
+		#row-alquiler {height: 63vw;}
+	}
+
+			/* ---- 1160 px ---- */
+	@media screen and (max-width: 1160px) {
+	  	#correo-navbar {
+	  		display: none;
+	  	}
+	  	.navbar-text {display: none;}
+	}
+
+			/* ---- 768 px -----*/
+	@media screen and (max-width: 768px) {
+	  	#a-correo-navbar {padding: 5px;}
+	  	#a-facebook-navbar {padding: 5px;}
+	  	#presentacion {padding: 70px 0 100px 0;}
+	  		#presentacion h1 {font-size: 3.0em;}
+	  			#presentacion h1 small {font-size: 55%;}
+
+	  		#sobre-mi p {font-size: 17px}
+	  		#sobre-mi .container {padding: 0 0;}
+
+	  	#servicios {padding-bottom: 20px;}
+	  		#servicios h3 {margin: 80px 100px;}
+	  	
+	  	#portfolio {padding-top: 30px;}
+
+	  	#contact {padding: 80px 0 0 0;}
+	  	
+	}
+
+			/* ---- 425 px ---- */
+	@media screen and (max-width: 452px) {
+		#presentacion {margin-bottom: 0; padding-bottom: 30px !important;}
+			#presentacion p {padding-top: 1.125em;}
+		  	#correo-jumbotron, #facebook-jumbotron, #instagram-jumbotron {font-size: 14px;}
+		  	#a-telefono-presentacion, #a-whatsapp-presentacion {font-size: 19px;}
+
+	  	#sobre-mi {padding-top: 30px; padding-bottom: 0px !important;}
+	  		#sobre-mi h3 {font-size: 1.6em;}
+		  	#sobre-mi p {font-size: 1em;}
+		  	#sobre-mi span {padding: 0 0 35px 0;}
+		  	#sobre-mi .row {padding: 20px;}
+		  	.logo-small {padding-top: 0px; font-size: 145px;padding-bottom: 35px;}
+
+	  	#servicios h3 {margin: 50px !important;}
+		#servicios i {font-size: 120px;padding-top: 20px;}
+
+	}
+
+			/* ----- 370 px ----- */
+	@media screen and (max-width: 370px) {
+		#presentacion h1 {font-size: 2.2em;}
+			#a-telefono-presentacion, #a-whatsapp-presentacion {font-size: 15px;}
+			#presentacion p {padding-top: 0.4em;}
+			#correo-jumbotron, #facebook-jumbotron, #instagram-jumbotron {font-size: 11px;}
+			.fa-envelope, .fa-facebook-square, .fa-instagram {font-size: 0.9em}
+
+		.logo-small {font-size: 120px;}
+
+	}
+
+			/* ----- min width 768 and max height 863 and orientation landscape ----- */
+	@media screen and (min-width: 768px) and (max-height: 863px) and (orientation: landscape) {
+		#presentacion {padding: 60px 10px;}
+			#presentacion h1 {font-size: 3.5em;}
+			#correo-jumbotron, #facebook-jumbotron, #instagram-jumbotron {font-size: 0.9em;}
+			#presentacion p {padding-top: 1.1em;}
+	}
