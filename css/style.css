@@ -1,0 +1,129 @@
+/* Estilos generales */
+
+  p { font-size: 15px;}
+
+  .cursor-pointer {cursor: pointer;}
+
+  i:hover {color: orange;}
+
+  img {max-width: 100%;}
+
+/* ----------- FIN Generales */
+
+/* Overlay bienvenida */
+  #imgIngreso {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+  #overlay_bienvenida {
+    cursor: pointer;
+    z-index: 990;
+  }
+  #first-page {
+    width: 85vw; 
+    height: 85vh; 
+    display: block; 
+    z-index: 999;
+  }
+    /*#contenido-first-page {}*/
+    #contenido-first-page h3 {margin-bottom: 0;} /* BIENVENIDO*/
+    #contenido-first-page img {cursor: pointer;max-width: 40vh; max-height: 50vw;}
+    /*#contenido-first-page h4 {}*/ /* Mi nombre es Matias Damian Vieira - Soy ...*/
+    /*#contenido-first-page p {}*/ /* Para conocer mas sobre mi, mi experiencia,...*/
+    /*#contenido-first-page p {margin: 35px 10%;}*/
+    /*#contenido-first-page button {}*/
+
+/* ----------- FIN - Overlay bienvenida */
+
+.secciones-bar i, #contentcv i {font-size: 20px;}
+
+#social-nav i {padding-left: 16px;}
+
+/* imagenes background parallax */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 70vh;
+}
+
+.bgimg-1 {background-image: url("../img/camino.jpg"); min-height: 100vh;}
+.bgimg-2 {background-image: url("../img/hojas.jpg");}
+.bgimg-3 {background-image: url("../img/sombrilla.jpg");}
+.bgimg-4 {background-image: url("../img/vision.jpg");}
+.bgimg-5 {background-image: url("../img/carrera.jpg");}
+.bgimg-6 {background-image: url("../img/porfolio.jpg");}
+.bgimg-7 {background-image: url("../img/parana.jpg");}
+
+#about-text { margin-top: 100px;}
+
+/*---------- FIN PARALAX */
+
+/* About Me */
+#toMe {
+	border-radius: 8px;
+	max-width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*Seccion Habilidades*/
+.skillRows { overflow: hidden; transition: all 1s;}
+.row-closed { max-height: 134px;}
+
+.ampliarTexto {
+	position: relative;
+	top: -55px;
+	background-image: linear-gradient(rgba(241,241,241,0), rgba(241,241,241,1), rgba(241,241,241,1));
+	padding-top: 36px;
+
+}
+
+/*Seccion Idiomas*/
+#contenido-idiomas i {font-size: 64px;}
+
+/* Seccion portfolio (Mis creaciones)*/
+.content {min-height: 520px;}
+
+/* Seccion redes sociales */
+	#social i {font-size: 36px;}
+		/*#social i[class*=linkedin]:hover {color: #0077B5;}*/
+		/*#social a[href*=linkedin]:hover i {color: #016097;}*/
+
+
+@media screen and (min-width: 992px) {
+	#myNavbar{
+		display: block;
+		position: relative;
+	}
+	#about-text{
+		margin-top: 0px;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	#contenido-first-page .w3-half {display: block; width: 100%;}
+	/*#contenido-first-page h4 {}*/
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	#contenido-first-page .w3-half {display: inline; width: 49%;}
+	/*#contenido-first-page h4 {}*/
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+	#contenido-first-page .w3-half {display: block; width: 100%;}
+}
+
+@media screen and (max-width: 374px) {
+	#contenido-first-page h3 {font-size: 20px;}
+	#contenido-first-page h4 {font-size: 18px;}
+	#contenido-first-page p {font-size: 13px;}
+	#contenido-first-page img {max-width: 35vh; max-height: 45vw;}
+}
+
+@media screen and (max-height: 374px) and (orientation: landscape) {
+	#contenido-first-page h3 {font-size: 20px;}
+	#contenido-first-page h4 {font-size: 16px; margin-top: 0;}
+	#contenido-first-page p {font-size: 12px;}
+	#contenido-first-page img {max-width: 35vh; max-height: 45vw;}
+} 
