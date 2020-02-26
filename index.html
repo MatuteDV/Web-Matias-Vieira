@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-ar">
 <head>
-	<title>Matias Damian Vieira - FrontEnd Developer</title>
+	<title>Matias Damian Vieira - Web Developer</title>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- W3CSS -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- Font family Raleway -->
@@ -11,9 +12,12 @@
 <!-- font awesome min -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Mi estilo -->
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- JQuery desde google -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Mi Script -->
+<script src="js/script.js"></script>
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
@@ -22,28 +26,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <body class="w3-light-grey w3-content" style="max-width:1920px">
 
 <!-- Overlay bienvenida -->
-<div id="overlay_bienvenida" class="w3-overlay w3-animate-opacity w3-show" style="cursor: pointer; z-index: 990;" onclick="cerrar_principal()"></div>
-<!-- card bienvenida -->
-<div id="first-page" class=" w3-orange w3-animate-opacity w3-card w3-display-middle">
-	<div id="contenido-first-page" class="w3-row-padding w3-center w3-padding-8">
-		<h3 class="w3-center w3-black w3-text-white">BIENVENIDO</h3><br>
-		<div class="w3-row">
-			<div class="w3-half w3-center">
-				<img src="img/ingreso.jpg" onclick="cerrar_principal()" class="w3-circle w3-image">
+<!--
+	<div id="overlay_bienvenida" class="w3-overlay transition w3-show" style="cursor: pointer; z-index: 990;" onclick="cerrar_principal()"></div>
+	card bienvenida  -- COMENTAR ESTO al quitar comentario general
+	<div id="first-page" class=" w3-orange transition w3-card w3-display-middle">
+		<div id="contenido-first-page" class="w3-row-padding w3-center w3-padding-8">
+			<h3 class="w3-center w3-black w3-text-white">BIENVENIDO</h3><br>
+			<div class="w3-row">
+				<div class="w3-half w3-center">
+					<img id="imgIngreso" src="img/tunel.jpg" onclick="cerrar_principal()" class="w3-circle w3-image">
+				</div>
+				<div class="w3-half w3-center">
+					<h4>Mi nombre es <br>Matias Damian Vieira<br>soy desarrolador web</h4>
+				</div>
+				<div>
+					<p>Para conocer mas sobre mí<span class="w3-hide-medium w3-hide-small">, mi experiencia, aspiraciones, metas, gustos y habilidades</span> te invito a que ingreses a mi sitio personal.</p>
+				</div>
 			</div>
-			<div class="w3-half w3-center">
-				<h4>Mi nombre es <br>Matias Damian Vieira<br>Soy FrontEnd Developer</h4>
-			</div>
-			<div>
-				<p>Para conocer mas sobre mí<span class="w3-hide-medium w3-hide-small">, mi experiencia, aspiraciones, metas, gustos y habilidades</span> te invito a que ingreses a mi sitio personal.</p>
-			</div>
+			<button onclick="cerrar_principal()" class="w3-button w3-orange w3-border w3-border-black w3-hover-black w3-round w3-padding w3-display-bottommiddle w3-margin-bottom">Ingresar</button>
 		</div>
-		<button onclick="cerrar_principal()" class="w3-button w3-orange w3-border w3-border-black w3-hover-black w3-round w3-padding w3-display-bottommiddle w3-margin-bottom">Ingresar</button>
 	</div>
-</div>
-
-
-</div>
+	
+-->
 
 <!-- Sidebar/menu -->
 <nav id="mySidebar" class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
@@ -51,9 +55,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		<a href="#" onclick="w3_close()" class="w3-hide-large w3-display-topright w3-large w3-padding w3-hover-text-green" title="close menu">
 		  <i class="fa fa-remove"></i>
 		</a>
-		<img src="img/tunel.jpg" style="width:45%;" class="w3-round"><br><br>
-		<h4><b>Matias Damian Vieira</b></h4>
-		<p class="w3-text-grey">FrontEnd Developer</p>
+		<img src="img/me.jpg" style="width:45%;" class="w3-round"><br><br>
+		<h4><strong>Matias Damian Vieira</strong></h4>
+		<p class="w3-text-grey">Web Developer</p>
   </div>
   <div class="w3-bar-block secciones-bar">
 		<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SOBRE MI</a> 
@@ -86,104 +90,257 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Cerrar menú" id="myOverlay"></div>
+<div class="w3-overlay w3-hide-large transition" onclick="w3_close()" style="cursor:pointer" title="Cerrar menú" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
   <header id="myNavbar" class="w3-top" style="background-color: rgba(255,255,255,0.01);">
-		<a href="#" class="w3-display-topright"><img src="img/tunel.jpg" style="width:75px; margin-top: 8px; margin-right: 16px;" class="w3-circle w3-right w3-hide-large"></a>
+		<a href="#" class="w3-display-topright"><img src="img/me.jpg" style="width:75px; margin-top: 8px; margin-right: 16px;" class="w3-circle w3-right w3-hide-large"></a>
 		<span class="w3-button w3-hide-large w3-xlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
   </header>
 
   <!-- Parallax 1 - Camino -->
   <div id="about" class="bgimg-1 w3-display-container w3-opacity-min">
 		<div class="w3-display-middle" style="white-space: nowrap;">
-			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Sobre mi</span>
+			<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide transition">Sobre mi</span>
 		</div>
   </div>
   
   <!-- Sobre mi -->
-	<div id="about-text" class="w3-container w3-padding-large" style="margin-bottom:32px;">
-		<!--<h4 class="w3-center w3-xlarge w3-padding-32"><b>Sobre mí</b></h4>-->
-		<p class="w3-large" style="line-height: 32px"><span class="w3-xxlarge" style="padding-left: 24px;">C</span>recí con gusto por la tecnología, en especial por las computadoras y sobre todo desarmar, probar, romper y volver a hacerlo andar. Antes de terminar el secundario terminé curso de reparador de PC y sabía que estudiaría Analista en sistemas informaticos, donde descubrí mas sobre el mundo de poder probar, romper y volver a hacer andar y en este caso el software. Soy Analista en sistemas informaticos y desde hace un tiempo que me oriento en desarrollo web; pero no hasta el crecimiento de HTML5 que atrajo mi interes en el desarrollo web, a día de hoy con el gran crecimiento de tecnologías que acompañan, tengo decidido dedicarme a conocer poco a poco como es ser FronEnd, BackEnd, nueva arquitectura de base de datos NO-SQL, APIs, Frameworks y librerías de cada lado, y todo lo increible que se volvió el desarrollo web. (reveer texto)</p>
-		<hr>
-
+	<div id="about-text" class="w3-container" style="margin-bottom:32px;">
+		<!--<h4 class="w3-center w3-xlarge w3-padding-32"><strong>Sobre mí</strong></h4>-->
 		<!-- Images of Me -->
-		<div class="w3-row-padding">
-		  <div class="w3-col m6">
-			<img src="img/costa1.jpg" alt="Me" style="width:100%">
+		<div class="w3-row-padding w3-padding-32">
+		  <div class="w3-col m12 l7">
+			<img id="toMe" src="img/m1.jpg" alt="Me" style="width:100%">
 		  </div>
-		  <div class="w3-col m6">
-			<img src="img/costa.jpg" alt="Me" style="width:100%">
+		  <div class="w3-col m12 l5">
+			<p class="w3-large" style="line-height: 32px">
+				<span class="w3-xxlarge" style="padding-left: 24px;">C</span>
+				  recí con gusto por la ciencia y la tecnología, en especial por las computadoras 
+				  y sobre todo desarmar, romper y volver a hacer andar. 
+				  Antes de terminar el secundario terminé curso de <strong>reparador de PC </strong>
+				  y sabía que estudiaría Analista en sistemas informaticos, 
+				  donde descubrí mas sobre el mundo de romper y volver a hacer andar pero en este caso el software. 
+				  <strong>Soy Analista en sistemas informaticos</strong> y actualmente que me oriento en desarrollo web; 
+				  pero no fue hasta el crecimiento de HTML5 que atrajo mi interes, 
+				  a día de hoy con el gran crecimiento de tecnologías que acompañan 
+				  tengo decidido ser desarrollador web conociendo poco a poco cada tecnología Front-end, Back-End,
+          base de datos SQL y NO-SQL, APIs, Frameworks/librerías de cada lado, y todo lo increible que se volvió el desarrollo web. 
+      </p>
 		  </div>
 		</div>
+		<hr>
+
 		<hr>
 		<!-- Parallax 2 - Hojas - Conocimientos técnicos -->
 		<div id="skills" class="bgimg-2 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Conocimientos técnicos</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Conocimientos técnicos</span>
 			</div>
 	  </div>
 
 		<!-- Habilidades - Skills -->    
 		<div class="w3-container" style="padding:68px 16px">
 			<!--<h3 class="w3-center">Conocimientos técnicos</h3>-->
-			<p class="w3-center w3-large">Tecnologías en las que me desenvuelvo</p>
-			<div class="w3-row-padding w3-center" style="margin-top:64px">
-				<div class="w3-quarter">
+			<h2 class="w3-center w3-xlarge">Habilidades</h2>
+			<div id="habilidadesPrimerFila" class="w3-row-padding w3-center" style="margin-top:64px"> <!-- Primera fila -->
+
+				<div class="w3-col m6 l3">
 					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-					<p class="w3-large">HTML</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p class="w3-large">HTML5 Jr.</p>
+          <div class="skillRows row-closed">
+            <p>
+              Si hablamos de <strong>HTML5</strong> no solo hablamos de maquetación web. 
+              Hablamos de un estándar, etiquetas nuevas, <strong>maquetado semántico</strong>, estilos y efectos con <strong>CSS</strong>, 
+              comportamiento con <strong>JavaScript</strong> y dinamismo con <strong>Ajax.</strong>
+            </p>
+            <p> 
+              Pero también tenemos que hablar de <strong>ECMAScript, DOM, BOM, eventos, JSON, Cookies y APIs</strong> (Workers, Plug-ins, Web Storage, etc). 
+              Podemos entonces agrupar dentro de “saber” HTML5 a saber <strong>DHTML, XHTML y SPA.</strong> 
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(0, this, 250)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
-				<div class="w3-quarter">
+
+				<div class="w3-col m6 l3">
 					<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">CSS</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p class="w3-large">CSS3 Jr.</p>
+          <div class="skillRows row-closed">
+            <p>
+              HTML5 busca, entre otras cuestiones, mejorar la <strong>legibilidad del código de maquetación; 
+              delegando a CSS todo el estilizado</strong>, que antes se implementaban mediante atributos de etiquetas. 
+              Claro que CSS ya es mucho más potente que eso desde antes de CSS3 y por esto para hablar de este lenguaje de estilizado, 
+              podemos resaltar:   
+            </p>
+            <p>
+              <strong>Variables.</strong><br>
+              <strong>Selectores nuevos</strong> por clase, pseudo-clases y pseudo-elementos, atributos y combinando estos. <br>
+              <strong>Edición de imágenes</strong>, tanto forma como efectos de imagen. <br>
+              Nuevas, mejores y practicos Layout: <strong>Flexbox, Grid View y Grid Container.</strong><br>
+              Y otras cuantas a destacar: Animaciones, contadores, sombras, transforms, rounded corners, SVG y Canvas. Entre otros más claro. <br>
+            </p>
+          </div>
+          <p class="w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(1, this, 402)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
-				<div class="w3-quarter">
-					<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">JS</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-				</div>
-				<div class="w3-quarter">
+
+				<div class="w3-col m6 l3">
 					<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">JQuery</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p class="w3-large">JavaScript / JQuery / AngularJs - (Jr.)</p>
+          <div class="skillRows row-closed">
+            <p>Librerías como <strong>JQuery</strong> y Frameworks Js como <strong>AngularJS</strong>, 
+              son hoy en día <strong>herramientas claves para</strong> desarrollar de manera estandarizada y más legible, 
+              <strong>codificar más rápido con funciones testeadas y mejoras de seguridad</strong>; 
+              abstrayendo operaciones complejas que podemos invocar .  
+            </p>
+            <p>
+              Cada Framework tiene sus ventajas y por esto conocer que puede hacer, compatibilidad
+              y como trabaja cada Framework es importante. 
+            </p>
+            <p>
+              Uno problema de su implementación es el peso agregado de carga de la librería/Framework, 
+              su compatibilidad con los distintos navegadores y a veces la necesidad de modificar código 
+              por actualizaciones de estos. 
+              Aquí es donde, si no es totalmente necesario/beneficioso un Framework, 
+              es importante conocer muy bien <strong>JavaScript Vanilla</strong> (JS puro). 
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(2, this, 419)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
+				</div>
+
+				<div class="w3-col m6 l3">
+					<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Cloudinary - WebP</p>
+          <div class="skillRows row-closed">
+            <p>
+              La <strong>optimización es un factor importante para una web.</strong> 
+              Una web, además que debe ser responsiva, es necesario que no demore en cargar
+              <strong>minimizando que los usuarios abandonen la web por esperas de carga</strong>. 
+              Y como una Web tiene mucho contenido de imágenes y videos, es importante 
+              su tamaño, formato, calidad y compresión. Pero además 
+              que el servidor tenga buenos tiempos de respuesta para brindarlos fluidamente.
+            </p>
+            <p>
+              Es óptimo tercerizar la carga de imágenes y videos a un hosting dedicado, 
+              como lo es <strong>Cloudinary</strong>, 
+              dado que quitaremos tráfico de nuestro servidor, 
+              <strong>aumentando los tiempos de respuesta de nuestro servidor</strong> 
+              y <strong>optimizando la entrega "multimedia" dinámicamente.</strong> 
+              Debido a que podremos: <br>
+                Solicitar las imágenes y videos adaptados dinámicamente su formato (<strong>Webp</strong>, Jpg, etc.), calidad, compresión, forma 
+                y tamaño al dispositivo desde el que se accedió. <br>
+                Distribuir el contenido en la red a fin que haya una copia próxima a cada cliente que accede. <br>
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(3, this, 490)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
 			</div>
-			<div class="w3-row-padding w3-center" style="margin-top:64px">
-				<div class="w3-quarter">
-					<i class="fa fa-mobile w3-margin-bottom w3-xxlarge w3-center"></i>
-					<i class="fa fa-desktop w3-margin-bottom w3-xxlarge w3-center"></i>
-					<i class="fa fa-tablet w3-margin-bottom w3-xxlarge w3-center"></i>
-					<p class="w3-large">Responsive Design / Mobile First</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+
+			<div id="habilidadesSegundaFila" class="w3-row-padding w3-center" style="margin-top:64px"> <!-- Segunda fila -->
+
+				<div class="w3-col m6 l3">
+					<i class="fa fa-mobile w3-margin-bottom w3-jumbo w3-center"></i>
+					<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+					<i class="fa fa-tablet w3-margin-bottom w3-jumbo w3-center"></i>
+          <p class="w3-large">Responsive Design Mobile First</p>
+          <div class="skillRows row-closed">
+            <p>
+              Hace ya tiempo que un sitio web debe ser responsivo para existir. 
+              Los motores de búsqueda priorizan estos sitios, como las buenas practicas y los sitios semánticos, 
+              y sumado al alto porcentaje de sitios visitados desde dispositivos móviles; 
+              se hace imprescindible desarrollar una página pensándola primero para móvil y adaptable para pantallas de escritorio. 
+              Que además hace más rápida su carga.
+            </p>
+            <p>
+              Para esto hay que conocer y saber aplicar <strong>MediaQuerys</strong>, <strong>medidas porcentuales</strong> (%, vw, vh, em, rem, etc.), 
+              entre otras propiedades y atributos, como también manejar Frameworks Front-end como <strong>Bootstrap</strong> 
+              o algunos mas completos o livianos como <strong>W3css</strong>, 
+              que nos ayudan con estas prácticas antes mencionadas y nos brindan herramientas/mejoras estéticas. 
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(4, this, 400)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
-				<div class="w3-quarter">
+
+				<div class="w3-col m6 l3">
 					<i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">Bootstrap / W3CSS</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p class="w3-large">Back-End PHP y SQL - (Jr.)</p>
+          <div class="skillRows row-closed">
+            <p>
+              Back-End, base de datos y Front-end deben ser diseñador por separados y pueden estar "escritas" en diferentes lenguajes. 
+              Back-end debe consumir información desde la base de datos bajo peticiones a servir desde el front-end. 
+              <strong>PHP</strong> es un lenguaje muy practico y ligero para casi cualquier proyecto y con diferentes métodos de implementación 
+              para conectar bases de datos estructurales <strong>SQL</strong>.
+            </p>
+            <p>
+              También a futuro no lejano quiero comenzar a desarrollar como <strong>MEAN y MERN Stack</strong>. 
+              MEAN Stack es un Full-Stack que utiliza las tecnologías <strong>MongoDB, ExpressJS, AngularJS y NodeJS</strong>, 
+              y MERN utiliza ReactJS en lugar de Angular. Desarrollando plenamente en JavaScript 
+              pero donde el mayor cambio esta en la base de datos con No-SQL; 
+              que es muy práctico en conjunto a JSON y rápido con grandes volúmenes de datos.
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(5, this, 402)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
-				<div class="w3-quarter">
+
+				<div class="w3-col m6 l3">
 					<i class="fa fa-git-square w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">Git</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p class="w3-large">Git</p>
+          <div class="skillRows row-closed">
+            <p>Es imprescindible trabajar con un control de versiones. No solo para uno poder manejar por versiones un proyecto 
+              o volver a una versión anterior. Sino también para el trabajo colaborativo.
+            </p>
+            <p>
+              <strong>Git</strong> es un control de versiones muy popular y que claramente es necesario conocer. 
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(6, this, 156)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
-				<div class="w3-quarter">
-					<i class="fa fa-object-group w3-margin-bottom w3-jumbo"></i>
-					<p class="w3-large">Ajax / JSON / XML</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+
+				<div class="w3-col m6 l3">
+					<i class="fa fa-cogs w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Trabajo en equipo</p>
+          <div class="skillRows row-closed">
+            <p>
+              Todos tenemos un fuerte en un área específica, y si sumamos el fuerte de muchos, obtenemos lo mejor de todos en cada área. 
+              Esta es una de las razones e importancia del <strong>trabajo en equipo y colaborativo</strong>. 
+              Pero no hay nada mejor para potenciar cada uno y como grupo, 
+              que un buen ambiente de trabajo donde <strong>ayudar</strong> al otro <strong>y aprender</strong> de los demás sea algo natural.
+            </p>
+            <p>
+              Tener paciencia, saber pedir ayuda y aceptar nuevas ideas, no debe ser problema para ningún integrante de un proyecto. 
+              Tanto horizontalmente como verticalmente debe haber confianza para pedir una mano, 
+              para criticar constructivamente o <strong>aportar una idea sin miedos</strong>. 
+            </p>
+          </div>
+          <p class=" w3-center cursor-pointer w3-hover-text-orange ampliarTexto" onclick="toggleHeightRow(7, this, 337)">
+            <i class="fa fa-angle-down w3-large"></i> Seguir leyendo 
+          </p>
 				</div>
 			</div>
-		</div>
+
+    </div>
 		<hr>
 
 		<!-- Parallax 3 - Sombrilla - Idiomas -->
 		<div id="idiomas" class="bgimg-3 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Idiomas</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Idiomas</span>
 			</div>
 	  </div>
 
@@ -191,13 +348,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  <div id="contenido-idiomas" class="w3-row w3-container w3-center w3-padding-32 w3-large">
 	  	<div class="w3-half">
 	  		<i class="fa fa-comment"></i>
-	  		<p><b>Español - Lengua nativa</b></p>
-	  		<p class="w3-padding-16">Poner algo acá sobre idioma español. </p>
+	  		<h3><strong>Español</strong></h3>
+	  		<p class="w3-padding-16 ">Lengua nativa </p>
 	  	</div>
 	  	<div class="w3-half">
 	  		<i class="fa fa-comment-o"></i>
-	  		<p><b>Ingles - Intermedio</b></p>
-	  		<p class="w3-padding-16">Desde Junio de 2018 retomé estudios de Ingles, con clases personalizadas, para poder continuar aprendiendo y alcanzar poder conversar fluidamente con hablantes nativos de esta lengua. </p>
+	  		<h3><strong>Ingles</strong></h3>
+        <p class="w3-padding-16"><strong>Intermedio</strong>. Desde Junio de 2018 retomé estudios de Ingles con clases personalizadas, 
+          para mejorar mi vocabulary, listening and speaking. </p>
 	  	</div>
 	  </div>
 	  <hr>
@@ -205,7 +363,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  <!-- Parallax 4 - Vision y Mision -->
 		<div id="visionymision" class="bgimg-4 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Vision y mision</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Vision y mision</span>
 			</div>
 	  </div>
 
@@ -214,10 +372,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  <div class="w3-row w3-cell-row">
 	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-edit' style='font-size:148px;'></i></div>
 	  	<div class="w3-twothird">
-	  		<h3 class="w3-center">Valores</h3>
-	  		<h5><span class="w3-xlarge">Vision:</span> Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+	  		<h2 class="w3-center">Valores</h2>
+				<p><span class="w3-xlarge">Vision:</span> 
+					No dejar de actualizarme en tecnologías y tendencias para el desarrollo Web,
+					 a fin de llegar y mantenerme como un desarrollador con conocimiento, experiencia y a la vanguardia.
+					 Recorriendo el camino evolutivo de HTML5, los frameworks, bases de datos y lenguajes de programación,
+					 es posible conocer que hace mejor a una tecnología u otra para cada proyecto. 
+					Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias, 
+          para poder implementar la tecnología mas acorde a cada proyecto.
+        </p>
 	  		<hr>
-	  		<p><span class="w3-xlarge"> Mision: </span>Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+				<p><span class="w3-xlarge"> Mision: </span>
+					Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y llevarlas al limite.
+					Donde una tecnología no esta a la altura de un proyecto, es necesario aprender e implementar algo nuevo.
+					Cada paso bajo necesidad demuestra las faltas y bondades de cada tecnologías y la necesidad de emplear nuevas tecnologías. 
+					Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.
+        </p>
 	  	</div>
 	  </div>
 	  <hr>
@@ -225,21 +395,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  	  <!-- Parallax 5 - Vision y Mision -->
 		<div id="carrera" class="bgimg-5 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Mi actual carrera</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Mi actual carrera</span>
 			</div>
 	  </div>
 
 	  <!-- Vision y mision - Donde estoy, que veo, donde quiero ir y como -->
 	  <hr>
 	  <div class="w3-row w3-cell-row">
-	  	<div class="w3-third w3-center" style="padding-top: 100px;"><i class='fa fa-map-marker' style='font-size:148px;'></i></div>
+			<div class="w3-third w3-center" style="padding-top: 80px;"><i class='fa fa-map-marker' style='font-size:148px;'></i></div>
+			
 	  	<div class="w3-twothird">
 	  		<h3 class="w3-center">Mi actual carrera - Developer Web</h3>
-	  		<h5><span class="w3-xlarge">Donde estoy:</span> Para hablar de donde estoy tengo que ver de donde vengo.... Tengo en claro conocer hasta aquí tecnologías básicas para el desarrollo Web, pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y recorriendo el camino evolutivo de HTML5. Es por esto que tengo como vision llegar a ser un amplio conocedor de tecnologías, sus diferencias, bondades y ausencias. Se donde tengo los pies y a donde se quiere llegar</h5>
+				<p><span class="w3-xlarge">Donde estoy:</span> 
+					Para llegar al final hay que saber donde estamos y visualizar el camino.... 
+					Tengo en claro que resta mucho por conocer en el desarrollo Web, 
+					pero tengo como vision conocer ampliamente el desarrollo y es necesario partir de una buena base y aplicada. 
+					Se donde tengo los pies y a donde quiero llegar</p>
 	  		<hr>
-	  		<p><span class="w3-xlarge"> Tecnologías actuales: </span>Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
-	  		<hr>
-	  		<p><span class="w3-xlarge"> Siguiente paso: </span>Como Siguiente paso quiero poder complementar el desarrollo como FrontEnd con paginas basicas y operando, ofrecer servicio a comercios para poder crecer en experiencia y sentir la necesidad de una nueva tecnología, que ya viene siendo necesario complentar con algun lenguage backend, basico (no sin antes profundizar con APIs, hacer uso de JSON, AJAX y XML). Para volver a avanzar con alguna nueva tecnología frontEnd, como puede ser framework buscado como Angular, escalable como VUEjs o React. Pero no sin quizas tambien acompañar aprendiendo Typescript. Para en adelante profundizar como BackEnd y en bases de datos. Pero de seguro poder hacer uso de lenguajes backend PHP básico, un nuevo Framework frontEnd y base de datos...Porque elegí las tecnologías que actualmente utilizo...Para poder llegar necesito no solo conocer las tecnologías, es necesario emplearlas y querer llevarlas al limite en donde se siente la necesidad de un paso mas en la evolucion del desarrollo web con HTML5. Cada paso bajo necesidad demuestra las faltas de las tecnologías y la necesidad de nuevas tecnologías y sus bondades. Es por esto que cada paso y cada tecnología aprendida debe madurar hasta la proxima.</p>
+				<p><span class="w3-xlarge"> Siguiente paso: </span>
+					Como siguiente paso quiero complementar el conocimiento de desarrollo web aplicandolo en diversos proyectos reales
+					 y operativos, ofreciendo servicio a comercios, para poder crecer en experiencia y profundizar en diferentes tecnologías
+					 acorde a cada proyecto. A la vez que voy aprendiendo nuevas tecnologías. 
 	  	</div>
 	  </div>
 	  <hr>
@@ -247,29 +423,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  <!-- Parallax 6 - Paraná -->
 		<div id="portfolio" class="bgimg-6 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Portfolio</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Portfolio</span>
 			</div>
 	  </div>
 	  <hr>
-	  <div class="w3-row w3-center">
+	  <div class="w3-row-padding w3-center">
 	  	<h3>Mis creaciones</h3>
-	  	<h5>De momento se muestran las primeras creaciones propias, estaré actualizando la sección a medida se creen nuevos desarrollos que considere poder compartir y se comparte <a href="#">mi otra web</a> para venta de desarrollos web ofrecidos para comercios. </h5>
 	  	<div class="w3-quarter">
 	  		<div class="w3-card">
-	  			<img src="img/walweb.jpg" alt="Web Walter Ferrando - Martillero público">
-	  			<div class="w3-container w3-center">
-	  				<p>Sitio web en construcción</p>
-	  				<p>Walter Ferrando Martillero público.</p>
-	  				<p>Bootstrap 3 - Personalizado</p>
-	  			</div>
-	  			<a href="index_walter.html" target="_blank">
+					<div class="content">
+						<h5 class="w3-padding-16">Walter Ferrando Martillero público.</h5>
+						<img src="img/walweb.jpg" alt="Web Walter Ferrando - Martillero público">
+						<div class="w3-center">
+							<p>Sitio web operativo y en desarrollo</p>
+							<p>Responsive, dinamico y autoadministrable</p>
+							<p>Bootstrap 3 - AngularJS, JSON y Ajax.</p>
+							<p>PHP y MariaDB</p>
+							<p>A implementar: Cloudinary e imagenes en WebP - Sesiones y seguridad.</p>
+						</div>
+					</div>
+	  			<a href="http://www.walterferrando.com.ar/" target="_blank">
 	  				<button class="w3-button w3-block w3-dark-grey">Acceder</button>
 	  			</a>
 	  		</div>
 	  	</div>
 	  	<div class="w3-quarter">
-	  		<div class="w3-card"></div>
-	  	</div>
+				<div class="w3-card">
+					<div class="content">
+						<h5 class="w3-padding-16">Mi Curriculum Vitae web.</h5>
+						<img src="img/cvweb.jpg" alt="Curriculum Vitae Matias Vieira - Desarrollador Web - CV Matias Vieira">
+						<div class="w3-center">
+							<p>Responsive - W3css</p>
+						</div>
+					</div>
+					<a href="cv.html" target="_blank">
+						<button class="w3-button w3-block w3-dark-grey">Acceder</button>
+					</a>
+				</div>
+			</div>
 	  	<div class="w3-quarter">
 	  		<div class="w3-card"></div>
 	  	</div>
@@ -283,7 +474,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 		<!-- Parallax 7 - Paraná -->
 		<div id="contact" class="bgimg-7 w3-display-container w3-opacity-min">
 			<div class="w3-display-middle" style="white-space: nowrap;">
-				<span class="w3-center w3-padding-large w3-black w3-wide w3-animate-opacity">Donde encontrarme?</span>
+				<span class="w3-center w3-padding-large w3-black w3-wide transition">Donde encontrarme?</span>
 			</div>
 	  </div>
 
@@ -294,31 +485,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54285.631851838494!2d-60.54998246895893!3d-31.747240722015007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44df2b9835231%3A0x554ebde0aa5cfa9a!2zUGFyYW7DoSwgRW50cmUgUsOtb3M!5e0!3m2!1ses!2sar!4v1560257093161!5m2!1ses!2sar" width="100%" frameborder="0" style="border:0; min-height: 300px;"></iframe>
 			</div>
 			<div class="w3-twothird">
-				<p>Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná, Entre Rios, Argentina (CP: 3100). (agregar mas info de Paraná)
-				Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná. Ciudad costera que lleva su nombre por el río Paraná. </p>
+				<p>
+					Nací, crecí, estudié y vivo actualmente en la ciudad de Paraná, Entre Rios, Argentina (CP: 3100). 
+					Capital de la provincia de Entre Ríos, se encuentra ubicada sobre la margen izquierda del río que le da su nombre 
+					y que en lengua guaraní significa “pariente del mar”.
+					Es poseedora de una vista incomparable del río y sus islas, y atardeceres de una belleza sin igual, 
+					con sus singulares y bellas barrancas de mas de 80 metros de altura del parque Urquiza.
+				</p>
+				<p>
+					Entre 1853 y 1861 fue la capital de la Confederación Argentina. 
+					Paraná fue formándose en la época de la colonización española, pero no fue fundada como ciudad, sino que su poblamiento fue gradual.
+				</p>
+				<p>
+						Entre sus atractivos característicos prevalecen ineludibles la renovada Avenida Costanera, el siempre encantador Parque Urquiza, 
+						el Puerto en sus distintas acepciones, la imponente Catedral y el solemne Teatro 3 de Febrero.
+				</p>
 			</div>
 		</div>
 		<hr>
 
 	  <!-- Donde encontrarme? - Redes Sociales -->
 	  <div id="social" class="w3-row w3-dark-grey">
-	  	<p class="w3-center w3-large w3-black"><span class="w3-hide-small">Podrás encontrarme</span>... en las siguientes redes.</p>
+	  	<p class="w3-center w3-large w3-black">... en las siguientes redes.</p>
 	  	<a href="https://github.com/MatuteDV" target="_blank">
 		  	<div class="w3-quarter w3-button w3-hover-black">
 		  		<i class="fa fa-github"></i>
 		  		<p>Github</p>
 		  	</div>
-		  </a>
-		  <a href="https://www.linkedin.com/in/matias-vieira-44ab127b/" target="_blank">
+		</a>
+		<a href="https://www.linkedin.com/in/matias-vieira-44ab127b/" target="_blank">
 		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
 	  			<i class="fa fa-linkedin"></i>
 	  			<p>Linked In</p>
 		  	</div>
-		  </a>
+		</a>
 	  	<a href="mailto:vieiramatias@hotmail.com?Subject=Contacto" target="_blank">
 		  	<div class="w3-quarter w3-button w3-hover-black w3-leftbar w3-border-black">
 		  		<i class="fa fa-envelope"></i>
-		  		<p>CONTACTO</p>
+		  		<p>Correo</p>
 		  	</div>
 		  </a>
 	  	<a href="tel:0343154465390">
@@ -329,86 +533,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 	  </div>
 			  
 	  <!-- Footer -->
-	  <footer class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.matiasvieiraweb.com.ar" title="Matias Vieira Front End Developer" target="_blank" class="w3-hover-opacity">Matias Vieira - Front End Developer</a></div>
+	  <footer class="w3-black w3-center w3-padding-24">
+		  Powered by 
+		  <a href="https://www.matiasvieiraweb.com.ar" title="Matias Vieira Web Developer" target="_blank" class="w3-hover-opacity">
+			Matias Vieira - Web Developer
+      </a>
+    </div>
 	  </footer>
 	<!-- End page content -->
 </div>
 
-<script>
-
-	// Script para abrir / cerrar sidebar
-	function w3_open() {
-		document.getElementById("mySidebar").style.display = "block";
-		document.getElementById("myOverlay").style.display = "block";
-	}
-	 
-	function w3_close() {
-		document.getElementById("mySidebar").style.display = "none";
-		document.getElementById("myOverlay").style.display = "none";
-	}
-	// Script para cerrar por overlay de bienvenida
-	function cerrar_principal() {
-		document.getElementById("first-page").style.display = "none";
-		document.getElementById("overlay_bienvenida").className = "";
-	}
-	// Script cambia style de navbar on scroll
-	window.onscroll = function() {myFunction()};
-	function myFunction() {
-		var navbar = document.getElementById("myNavbar");
-		if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-			navbar.className = " w3-top" + " w3-card" + " w3-animate-opacity" + " w3-black";
-			navbar
-		} else {
-			navbar.className = " w3-top";
-		}
-	}
-
-	  //Script Toggle sección CV en Sidebar.
-  function togglecv() {
-  	var cvs = document.getElementById("contentcv");
-  	if (cvs.className == "w3-hide") {
-  		cvs.className = "w3-show";
-  	} else {cvs.className = "w3-hide";}
-  };
-$(document).ready(function(){
-  // Add smooth scrolling a todos los links navbar + footer link (por implementar)
-  $(".secciones-bar a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-
-  //Script carga mapa google - posicion Paraná
-  /*
-  function mimapa() {
-  	var prop = {
-  		center:new google.maps.LatLng(51.508742,-0.120850),
-  		zoom:5,
-  	};
-  	var map = new google.maps.Map(document.getElementById("googlemap"),prop);
-  } */// fin map
-  
-});
-
-
-</script>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6w1hY1PyB8MDnlG580s41EZ-4GDdfu9c&callback=mimapa"></script>-->
 
 
