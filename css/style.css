@@ -46,13 +46,13 @@
 	min-height: 70vh;
 }
 
-.bgimg-1 {background-image: url("../img/camino.jpg"); min-height: 100vh;}
-.bgimg-2 {background-image: url("../img/hojas.jpg");}
-.bgimg-3 {background-image: url("../img/sombrilla.jpg");}
-.bgimg-4 {background-image: url("../img/vision.jpg");}
-.bgimg-5 {background-image: url("../img/carrera.jpg");}
-.bgimg-6 {background-image: url("../img/porfolio.jpg");}
-.bgimg-7 {background-image: url("../img/parana.jpg");}
+.bgimg-1 {background-image: url("../img/camino.webp"); min-height: 100vh;}
+.bgimg-2 {background-image: url("../img/hojas.webp");}
+.bgimg-3 {background-image: url("../img/sombrilla.webp");}
+.bgimg-4 {background-image: url("../img/vision.webp");}
+.bgimg-5 {background-image: url("../img/carrera.webp");}
+.bgimg-6 {background-image: url("../img/porfolio.webp");}
+.bgimg-7 {background-image: url("../img/parana.webp");}
 
 #about-text { margin-top: 100px;}
 
